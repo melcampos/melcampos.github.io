@@ -46,6 +46,24 @@
 
   /* Space so content doesn’t hide behind fixed navbar (adjust as needed) */
   body { padding-top: 72px; }
+/* Keep the navbar always visible at top */
+#mainNav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  transform: none !important;
+  transition: background-color .2s, box-shadow .2s; /* smooth effect */
+}
+
+/* Prevent any hiding classes from moving it */
+#mainNav.navbar-hidden,
+#mainNav.is-hidden,
+#mainNav.navbar-hide {
+  transform: none !important;
+  top: 0 !important;
+}
 </style>
     </head>
     <body id="page-top">
@@ -86,7 +104,7 @@
           <!-- OPTION A: Formspree (recommended for static sites) -->
           <!-- 1) Create a Formspree form and replace the action URL below -->
           <form
-            action="https://formspree.io/f/xgvnwjvp"  <!-- <<< replace with your Formspree endpoint -->
+            action="https://formspree.io/f/xgvnwjvp"
             method="POST"
             class="needs-validation"
             novalidate
