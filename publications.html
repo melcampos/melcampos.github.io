@@ -14,6 +14,31 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+          /* Card-like list items */
+          .pub-card {
+            background: #fff;
+            border-radius: .5rem;
+            border: 1px solid rgba(0,0,0,.06);
+            padding: 1rem 1.25rem;
+            transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+          }
+          .pub-card:hover,
+          .pub-card:focus-within {
+            box-shadow: 0 10px 24px rgba(0,0,0,.08);
+            transform: translateY(-2px);
+            border-color: #0d6efd33; /* subtle brand tint */
+          }
+          .pub-link a { text-decoration: none; }
+          .pub-link a:hover { text-decoration: underline; }
+          .year-heading {
+            margin: 2.5rem 0 1rem;
+            font-weight: 800;
+            letter-spacing: .01em;
+          }
+          .pub-list { list-style: none; padding-left: 0; margin: 0; }
+          .pub-list li + li { margin-top: .75rem; }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -34,42 +59,71 @@
                 </div>
             </div>
         </nav>
-        <!-- Publications-->
-        <section class="publications-section text-center" id="publications">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-black mb-4"> Selected Publications</h2>
-                        <ul class="publications-list">
-                            <li class="publication">
-                                <p class="mb-0 text-black-50">Ditter RE, <strong>Campos M</strong>, Pinto J, Cornel AJ, Rompão H, Lanzaro GC. Mitogenome analyses reveal limited introduction of Anopheles coluzzii into the West African islands of São Tomé and Príncipe. Frontiers in Tropical Diseases, 3:855272 (2022) <a href="https://doi.org/10.3389/fitd.2022.855272">[Link]</a></p>
-                            </li>
-                            <li class="publication">
-                                <p class="mb-0 text-black-50">Rashid I, <strong>Campos M</strong>, Collier T, Crepeau M, Weakley A, Gripkey H, Lee Yoosook, Schmidt H, Lanzaro GC. Spontaneous mutation rate estimates for the principal malaria vectors Anopheles coluzzii and Anopheles stephensi. Scientific Reports 12, 226 (2022) <a href="https://doi.org/10.1038/s41598-021-03943-z">[Link]</a></p>
-                            </li>
-                            <li class="publication">
-                                <p class="mb-0 text-black-50">Lanzaro GC, <strong>Campos M</strong>, Crepeau M, Cornel A, Estrada A, Gripkey H, Haddad Z, Kormos A, Palomares S. Selection of sites for field trials of genetically engineered mosquitoes with gene drive. Evolutionary Applications, 14, 2147-2161 (2021) <a href="https://doi.org/10.1111/eva.13283">[Link]</a></p>
-                            </li>
-                            <li class="publication">
-                                <p class="mb-0 text-black-50">Kelly ET, Mack LK, <strong>Campos M</strong>, Grippin C, Chen T-Y, Romero-Weaver AL, . . . Lee, Y. Evidence of Local Extinction and Reintroduction of Aedes aegypti in Exeter, California. Frontiers in Tropical Diseases, 2(8) (2021) <a href="https://doi.org/10.3389/fitd.2021.703873">[Link]</a></p>
-                            </li>
-                            <li class="publication">
-                                <p class="mb-0 text-black-50"><strong>Campos M</strong>, Hanemaaijer M, Gripkey H, Collier TC, Lee Y, Cornel AJ, Pinto J, Ayala D, Rompão H, Lanzaro GC. The origin of island populations of the African malaria mosquito, Anopheles coluzzii. Communications Biology, 4, 630 (2021) <a href="https://doi.org/10.1038/s42003-021-02168-0">[Link]</a></p>
-                            </li>
-                            <li class="publication">
-                                <p class="mb-0 text-black-50"><strong>Campos M</strong>, Rona LDP, Willis K, Christophides GK, MacCallum RM. Unravelling population structure heterogeneity within the genome of the malaria vector Anopheles gambiae. BMC Genomics, 22, 422 (2021) <a href="https://doi.org/10.1186/s12864-021-07722-y">[Link]</a></p>
-                            </li>
-                            <li class="publication">
-                                <p class="mb-0 text-black-50"><strong>Campos M</strong>, Alonso DP, Conn JE. et al. Genetic diversity of Nyssorhynchus (Anopheles) darlingi related to biting behavior in western Amazon. Parasites Vectors, 12, 242 (2019) <a href="https://doi.org/10.1186/s13071-019-3498-4">[Link]</a></p>
-                            </li>
-                            <li class="publication">
-                                <p class="mb-0 text-black-50">Alonso DP, <strong>Campos M</strong>, Troca H, Kunii R, Tripet F, Ribolla PEM. Gene expression profile of Aedes aegypti females in courtship and mating. Scientific Reports, 9, 15492 (2019) <a href="https://doi.org/10.1038/s41598-019-52268-5">[Link]</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Publications -->
+<section class="publications-section py-5" id="publications">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="text-black mb-4 text-center">Selected Publications</h2>
+
+        <!-- This is where grouped content will be rendered -->
+        <div id="pubs-by-year"></div>
+
+        <!-- Keep your raw items here. JS will read them and build groups above. -->
+        <ul id="pub-source" class="d-none">
+          <li>
+            Ditter RE, <strong>Campos M</strong>, Pinto J, Cornel AJ, Rompão H, Lanzaro GC.
+            Mitogenome analyses reveal limited introduction of <em>Anopheles coluzzii</em> into the West African islands of São Tomé and Príncipe.
+            <span class="fst-italic">Frontiers in Tropical Diseases</span>, 3:855272 (2022)
+            <a href="https://doi.org/10.3389/fitd.2022.855272">[Link]</a>
+          </li>
+          <li>
+            Rashid I, <strong>Campos M</strong>, Collier T, Crepeau M, Weakley A, Gripkey H, Lee Yoosook, Schmidt H, Lanzaro GC.
+            Spontaneous mutation rate estimates for the principal malaria vectors <em>Anopheles coluzzii</em> and <em>Anopheles stephensi</em>.
+            <span class="fst-italic">Scientific Reports</span> 12, 226 (2022)
+            <a href="https://doi.org/10.1038/s41598-021-03943-z">[Link]</a>
+          </li>
+          <li>
+            Lanzaro GC, <strong>Campos M</strong>, Crepeau M, Cornel A, Estrada A, Gripkey H, Haddad Z, Kormos A, Palomares S.
+            Selection of sites for field trials of genetically engineered mosquitoes with gene drive.
+            <span class="fst-italic">Evolutionary Applications</span>, 14, 2147–2161 (2021)
+            <a href="https://doi.org/10.1111/eva.13283">[Link]</a>
+          </li>
+          <li>
+            Kelly ET, Mack LK, <strong>Campos M</strong>, Grippin C, Chen T-Y, Romero-Weaver AL, … Lee, Y.
+            Evidence of Local Extinction and Reintroduction of <em>Aedes aegypti</em> in Exeter, California.
+            <span class="fst-italic">Frontiers in Tropical Diseases</span>, 2(8) (2021)
+            <a href="https://doi.org/10.3389/fitd.2021.703873">[Link]</a>
+          </li>
+          <li>
+            <strong>Campos M</strong>, Hanemaaijer M, Gripkey H, Collier TC, Lee Y, Cornel AJ, Pinto J, Ayala D, Rompão H, Lanzaro GC.
+            The origin of island populations of the African malaria mosquito, <em>Anopheles coluzzii</em>.
+            <span class="fst-italic">Communications Biology</span>, 4, 630 (2021)
+            <a href="https://doi.org/10.1038/s42003-021-02168-0">[Link]</a>
+          </li>
+          <li>
+            <strong>Campos M</strong>, Rona LDP, Willis K, Christophides GK, MacCallum RM.
+            Unravelling population structure heterogeneity within the genome of the malaria vector <em>Anopheles gambiae</em>.
+            <span class="fst-italic">BMC Genomics</span>, 22, 422 (2021)
+            <a href="https://doi.org/10.1186/s12864-021-07722-y">[Link]</a>
+          </li>
+          <li>
+            <strong>Campos M</strong>, Alonso DP, Conn JE. et al.
+            Genetic diversity of <em>Nyssorhynchus (Anopheles) darlingi</em> related to biting behavior in western Amazon.
+            <span class="fst-italic">Parasites & Vectors</span>, 12, 242 (2019)
+            <a href="https://doi.org/10.1186/s13071-019-3498-4">[Link]</a>
+          </li>
+          <li>
+            Alonso DP, <strong>Campos M</strong>, Troca H, Kunii R, Tripet F, Ribolla PEM.
+            Gene expression profile of <em>Aedes aegypti</em> females in courtship and mating.
+            <span class="fst-italic">Scientific Reports</span>, 9, 15492 (2019)
+            <a href="https://doi.org/10.1038/s41598-019-52268-5">[Link]</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Campos's Website 2023</div></footer>
         <!-- Bootstrap core JS-->
@@ -81,5 +135,62 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+  (function () {
+    const src = document.getElementById('pub-source');
+    const out = document.getElementById('pubs-by-year');
+    if (!src || !out) return;
+
+    // Grab each <li> and parse a 4-digit year (the *last* year in the text wins)
+    const items = Array.from(src.querySelectorAll('li')).map(li => {
+      const text = li.textContent;
+      const years = text.match(/\b(19|20)\d{2}\b/g) || [];
+      const year = years.length ? parseInt(years[years.length - 1], 10) : 'Other';
+      return { year, html: li.innerHTML.trim() };
+    });
+
+    // Group by year
+    const groups = items.reduce((acc, it) => {
+      const key = it.year;
+      acc[key] = acc[key] || [];
+      acc[key].push(it);
+      return acc;
+    }, {});
+
+    // Sort years desc, with 'Other' last
+    const sortedYears = Object.keys(groups)
+      .sort((a, b) => {
+        if (a === 'Other') return 1;
+        if (b === 'Other') return -1;
+        return parseInt(b, 10) - parseInt(a, 10);
+      });
+
+    // Render groups
+    const frag = document.createDocumentFragment();
+    sortedYears.forEach(y => {
+      const section = document.createElement('section');
+      section.className = 'mb-4';
+      section.innerHTML = `
+        <h3 class="year-heading">${y}</h3>
+        <ul class="pub-list"></ul>
+      `;
+      const ul = section.querySelector('ul');
+      groups[y].forEach(({ html }) => {
+        const li = document.createElement('li');
+        li.className = 'pub-link';
+        li.innerHTML = `
+          <div class="pub-card">
+            <p class="mb-0 text-black-50">${html}</p>
+          </div>
+        `;
+        ul.appendChild(li);
+      });
+      frag.appendChild(section);
+    });
+
+    out.innerHTML = '';
+    out.appendChild(frag);
+  })();
+</script>
     </body>
 </html>
