@@ -67,47 +67,123 @@
                 </div>
             </div>
         </nav>
-        <!-- Contact-->
-        <section class="contact-section bg-black" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">1 Shields Ave, Davis CA</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">mdelima@ucdavis.edu</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">+1 (530) 752-7333</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
-                </div>
+<!-- Contact -->
+<section class="contact-hero" id="contact">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center text-center text-white mb-5">
+      <div class="col-lg-8">
+        <h2 class="display-6 fw-bold">Get in touch</h2>
+        <p class="lead mb-0">Questions, collaborations, or speaking invites — we'd love to hear from you.</p>
+      </div>
+    </div>
+
+    <div class="row gx-4 gx-lg-5">
+      <!-- Address -->
+      <div class="col-md-4 mb-4">
+        <div class="card contact-card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Address</h4>
+            <hr class="my-3 mx-auto" />
+            <div class="small text-black-50">
+              1 Shields Ave, Davis, CA<br/>
+              University of California, Davis
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-md-4 mb-4">
+        <div class="card contact-card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Phone</h4>
+            <hr class="my-3 mx-auto" />
+            <div class="small text-black-50">+1 (530) 752-7333</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div class="col-md-4 mb-4">
+        <div class="card contact-card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-share-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Social</h4>
+            <hr class="my-3 mx-auto" />
+            <div class="d-flex justify-content-center gap-3">
+              <a class="text-decoration-none" href="https://twitter.com/" target="_blank" rel="noopener">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a class="text-decoration-none" href="https://github.com/melcampos" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+              </a>
+              <!-- Add more as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Send a message (form) -->
+    <div class="row gx-4 gx-lg-5 justify-content-center mt-4">
+      <div class="col-lg-8">
+        <div class="card contact-form-card p-4">
+          <h3 class="mb-3">Send a message</h3>
+
+          <!-- OPTION A: Formspree (recommended for static sites) -->
+          <!-- 1) Create a Formspree form and replace the action URL below -->
+          <form
+            action="https://formspree.io/f/yourFormID"  <!-- <<< replace with your Formspree endpoint -->
+            method="POST"
+            class="needs-validation"
+            novalidate
+          >
+            <div class="mb-3">
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="_replyto" placeholder="you@email.com" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+              <div class="invalid-feedback">Please enter a subject.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+
+            <!-- Optional: honeypot to reduce spam -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <!-- Optional: redirect after success -->
+            <input type="hidden" name="_redirect" value="https://melcampos.github.io/contact.html?sent=1">
+
+            <button type="submit" class="btn btn-primary btn-lg">Send</button>
+          </form>
+
+          <!-- OPTION B: mailto (fallback — opens user’s email client)
+          <form action="mailto:mdelima@ucdavis.edu" method="post" enctype="text/plain">
+            ...
+          </form>
+          -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Campos's Website 2023</div></footer>
         <!-- Bootstrap core JS-->
@@ -119,5 +195,20 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+  // Bootstrap validation
+  (function () {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault(); event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
     </body>
 </html>
