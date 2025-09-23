@@ -1,118 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="Melina Campos" />
-        <title>Melina Campos, PhD</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Melina Campos, PhD</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Research — Melina Campos, PhD" />
+    <meta name="author" content="Melina Campos" />
+    <title>Research — Melina Campos, PhD</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      /* keep room for fixed navbar */
+      body { padding-top: 72px; }
+
+      /* navbar always visible */
+      #mainNav {
+        position: fixed !important;
+        top: 0 !important; left: 0; right: 0;
+        z-index: 1030;
+        transform: none !important;
+      }
+
+      /* ===== Hero with An. darlingi image ===== */
+      .research-hero {
+        position: relative;
+        min-height: 80vh;
+        background: url('assets/img/darlingi.jpg') center/cover no-repeat;
+        display: flex; align-items: center;
+      }
+      /* subtle left-to-right dark gradient for legibility */
+      .research-hero::before {
+        content: ""; position: absolute; inset: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.15) 100%);
+      }
+      .research-hero .container { position: relative; z-index: 1; }
+      .hero-text {
+        max-width: 760px;
+        color: #fff;
+      }
+      .hero-text h1 {
+        font-weight: 800; letter-spacing: .01em;
+      }
+      .hero-text p {
+        font-weight: 300; /* light font as requested */
+        line-height: 1.6;
+        font-size: 1.05rem;
+      }
+
+      /* section cards */
+      .project-card {
+        border: 0; border-radius: .75rem;
+        box-shadow: 0 10px 24px rgba(0,0,0,.10);
+        overflow: hidden;
+      }
+      .project-img {
+        width: 100%; height: 100%; object-fit: cover; min-height: 280px;
+      }
+      .project-body {
+        padding: 1.75rem;
+      }
+      .project-dark {
+        background: #0b0f13; color: #cfd8e3;
+      }
+      .project-dark h4 { color: #fff; }
+      .project-dark p { color: #b8c1ce; }
+
+      .section-pad { padding: 3.5rem 0; }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">Melina Campos, PhD</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero: An. darlingi + left-aligned summary -->
+    <header class="research-hero">
+      <div class="container px-4 px-lg-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="hero-text">
+              <h1 class="mb-3">Research Focus</h1>
+              <p class="mb-3">
+                My work is rooted in field-collected specimens and an integrated view of mosquito populations in nature.
+                I study how genetic variation shapes vector dynamics—dispersal, structure, divergence, and demography—
+                to generate evidence that directly supports public health and vector control.
+              </p>
+              <p class="mb-3">
+                I’m an experienced population geneticist with nearly a decade of international research in mosquito vectors of
+                critical public health importance. After formative training and FAPESP-funded work in Brazil, my research expanded
+                through positions at Imperial College London and the University of California, Davis. These experiences shaped me
+                into an independent scientist with the technical depth and collaborative network to lead impactful projects.
+              </p>
+              <p class="mb-0">
+                My current and future program centers on <em>Aedes aegypti</em> in Brazil—especially in São Paulo—integrating
+                geo-referenced sampling, population genomics and ecological data to understand fine-scale dispersal and the
+                evolution of insecticide resistance in urban environments. This framework is designed to inform and evaluate
+                interventions (e.g., Wolbachia releases, genetically modified strains), and generalizes to other major vectors,
+                including <em>Anopheles darlingi</em> in the Amazon Basin.
+              </p>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center">
-                        <h1 class="mx-auto my-0">Melina Campos</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Population Genetics, Genomics, Evolution</h2>
-                        <a class="btn btn-primary" href="index.html">More Info</a>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Research pillars -->
+    <section class="section-pad">
+      <div class="container px-4 px-lg-5">
+        <!-- Project One: Laboratory -->
+        <div class="row gx-0 align-items-stretch mb-5">
+          <div class="col-lg-6">
+            <img class="project-img" src="assets/img/lab-bw.jpg" alt="Laboratory bench and equipment">
+          </div>
+          <div class="col-lg-6">
+            <div class="project-card project-dark h-100 d-flex">
+              <div class="project-body my-auto">
+                <h4 class="mb-2">Laboratory</h4>
+                <p class="mb-0">
+                  Extensive experience with genomic and transcriptomic library preparation for Illumina platforms;
+                  mosquito rearing and manipulation (dissections, embryo/adult microinjections), and experimental infections.
+                  These wet-lab capabilities tightly couple with downstream population-genomic analyses to close the loop from
+                  sample to inference.
+                </p>
+              </div>
             </div>
-        </header>
-        <!-- Research-->
-        <section class="research-section bg-light" id="research">
-            <div class="container px-4 px-lg-5">
-                <!-- Featured Project Row-->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/pic-overview.jpg" alt="..." /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>My Research</h4>
-                            <p class="text-black-50 mb-0">My research revolves around field-collected specimens. The integration of genetic insights into vector dynamics with an understanding of natural populations holds immense value for public health initiatives and vector control strategies. This is exactly what drives and guides my research, bridging the gap between academic inquiry and practical control measures. My particular focus centers on delving into population attributes including structure, dispersal, divergence, and demographic trends.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/lab-bw.jpg" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Laboratory</h4>
-                                    <p class="mb-0 text-white-50"> I have extensive expertise in genomic and transcriptomic library preparations for sequencing employing Illumina technology. Furthermore, I have also acquired significant hands-on experience in mosquito rearing and handling techniques, including delicate procedures like dissection, micro-injection of both adult mosquitoes and eggs, and the infection of mosquitoes with the malaria parasite. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/mosquito-bw.jpg" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Field</h4>
-                                    <p class="mb-0 text-white-50">I have accumulated field work experience by collecting various mosquito species from the Aedes and Anopheles genus, using diverse collection methods tailored for distinct purposes and mosquito life stages. These collections have taken place across both urban and rural environments, spanning locations in Brazil and Africa.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Three Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/bioinfo-bw.jpg" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Bioinformatics</h4>
-                                    <p class="mb-0 text-white-50">I acquired my bioinformatics skills by meeting the specific requirements of my research. My journey encompasses a range of experiences, starting from earlier generations of software designed for population genetics to navigating server environments and embracing High-Performance Computing. I have delved deeply into a variety of programming languages, such as R, Python, and Unix. As a result, I became quite independent and skilled bioinformatician, proficiently wielding numerous tools for population genomic analysis.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+
+        <!-- Project Two: Field -->
+        <div class="row gx-0 align-items-stretch mb-5">
+          <div class="col-lg-6 order-lg-2">
+            <img class="project-img" src="assets/img/mosquito-bw.jpg" alt="Mosquito close-up and field notebook">
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="project-card project-dark h-100 d-flex">
+              <div class="project-body my-auto">
+                <h4 class="mb-2">Field</h4>
+                <p class="mb-0">
+                  Field collections across urban and rural settings in Brazil and Africa, sampling multiple life stages and
+                  species (<em>Aedes</em>, <em>Anopheles</em>) using purpose-specific methods. Emphasis on geo-referenced designs
+                  that enable fine-scale inference on dispersal, connectivity, and local adaptation relevant to control programs.
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Campos's Website 2023</div></footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+          </div>
+        </div>
+
+        <!-- Project Three: Bioinformatics -->
+        <div class="row gx-0 align-items-stretch">
+          <div class="col-lg-6">
+            <img class="project-img" src="assets/img/bioinfo-bw.jpg" alt="Bioinformatics and code on screen">
+          </div>
+          <div class="col-lg-6">
+            <div class="project-card project-dark h-100 d-flex">
+              <div class="project-body my-auto">
+                <h4 class="mb-2">Bioinformatics</h4>
+                <p class="mb-0">
+                  Population-genomics pipelines built in R, Python, and Unix/HPC environments; from classic population-genetic
+                  toolkits to modern workflows for demographic modeling, selection scans, phasing, and resistance mapping.
+                  Strong interest in reproducible, open workflows that connect data science, clear visualization, and
+                  science communication.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black small text-center text-white-50">
+      <div class="container px-4 px-lg-5">Copyright &copy; Campos's Website 2023</div>
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
