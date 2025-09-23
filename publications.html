@@ -38,6 +38,33 @@
           }
           .pub-list { list-style: none; padding-left: 0; margin: 0; }
           .pub-list li + li { margin-top: .75rem; }
+            /* Fixed profile bar below navbar */
+.profile-bar {
+  position: fixed;
+  top: 72px; /* height of your fixed navbar */
+  left: 0;
+  right: 0;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  z-index: 1029; /* slightly less than navbar */
+  padding: 0.5rem 1rem;
+}
+
+.profile-bar a {
+  margin: 0 1rem;
+  font-weight: 600;
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.profile-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Push main content down so it doesn’t overlap */
+.publications-section {
+  margin-top: 60px; /* adjust so content starts below profile bar */
+}
         </style>
     </head>
     <body id="page-top">
@@ -59,6 +86,18 @@
                 </div>
             </div>
         </nav>
+        <!-- Profile Links Bar -->
+<div class="profile-bar text-center">
+  <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+    <i class="fas fa-graduation-cap"></i> Google Scholar
+  </a>
+  <a href="https://www.researcherid.com/rid/YOUR_ID" target="_blank">
+    <i class="fas fa-id-card"></i> ResearchID
+  </a>
+  <a href="https://orcid.org/YOUR_ID" target="_blank">
+    <i class="fab fa-orcid"></i> ORCID
+  </a>
+</div>
         <!-- Publications -->
 <section class="publications-section py-5" id="publications">
   <div class="container px-4 px-lg-5">
