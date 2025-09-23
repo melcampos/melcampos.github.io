@@ -1,184 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="Melina Campos" />
-        <title>Melina Campos, PhD</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <style>
-  /* Full-width section with background image and a dark overlay */
-  .contact-hero {
-    position: relative;
-    background-image: url('assets/img/mosquito-bw.jpg'); /* <-- put your image here */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* nice parallax-ish feel */
-    padding: 6rem 0 5rem; /* ensure space below fixed navbar */
-  }
-  .contact-hero::before {
-    content: "";
-    position: absolute; inset: 0;
-    background: rgba(0,0,0,0.45);  /* overlay */
-  }
-  .contact-hero > .container {
-    position: relative; /* keep content above overlay */
-    z-index: 1;
-  }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Melina Campos" />
+    <title>Melina Campos, PhD</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-  /* Cards & form look good on dark background */
-.contact-card, .contact-form-card {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 0;
-  border-radius: .75rem;
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);
-}
+    <!-- Font Awesome icons (free version) -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-  /* Make labels readable */
-  .form-label { color: #111; }
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
 
-  /* Space so content doesn’t hide behind fixed navbar (adjust as needed) */
-  body { padding-top: 72px; }
-/* Keep the navbar always visible at top */
-#mainNav {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-  transform: none !important;
-  transition: background-color .2s, box-shadow .2s; /* smooth effect */
-}
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet" />
 
-/* Prevent any hiding classes from moving it */
-#mainNav.navbar-hidden,
-#mainNav.is-hidden,
-#mainNav.navbar-hide {
-  transform: none !important;
-  top: 0 !important;
-}
-</style>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Melina Campos, PhD</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-<!-- Contact -->
-<section class="contact-hero" id="contact">
-  <div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center text-center text-white mb-5">
-      <div class="col-lg-8">
-        <h2 class="display-6 fw-bold">Get in touch</h2>
-        <p class="lead mb-0"></p>
-      </div>
-    </div>
-    <div class="row gx-4 gx-lg-5">
-    <!-- Send a message (form) -->
-    <div class="row gx-4 gx-lg-5 justify-content-center mt-4">
-      <div class="col-lg-8">
-        <div class="card contact-form-card p-4">
-          <h3 class="mb-3">Send a message</h3>
+    <style>
+      /* Space so content doesn’t hide behind fixed navbar (adjust as needed) */
+      body { padding-top: 72px; }
 
-          <!-- OPTION A: Formspree (recommended for static sites) -->
-          <!-- 1) Create a Formspree form and replace the action URL below -->
-          <form
-            action="https://formspree.io/f/xgvnwjvp"
-            method="POST"
-            class="needs-validation"
-            novalidate
-          >
-            <div class="mb-3">
-              <label for="name" class="form-label">Your name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
+      /* Keep the navbar always visible at top */
+      #mainNav {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        transform: none !important;
+        transition: background-color .2s, box-shadow .2s;
+      }
+      #mainNav.navbar-hidden,
+      #mainNav.is-hidden,
+      #mainNav.navbar-hide {
+        transform: none !important;
+        top: 0 !important;
+      }
 
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" name="_replyto" placeholder="your@email.com" required>
-              <div class="invalid-feedback">Please enter a valid email.</div>
-            </div>
+      /* 1) Full-width section with larger background image and overlay */
+      .contact-hero {
+        position: relative;
+        background-image: url('assets/img/mosquito-bw.jpg'); /* your image */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* parallax-ish */
+        min-height: 110vh;           /* taller than the viewport */
+        padding: 7rem 0 6rem;        /* breathing room */
+      }
+      .contact-hero::before {
+        content: "";
+        position: absolute; inset: 0;
+        background: rgba(0,0,0,0.45);  /* overlay for contrast */
+      }
+      /* (Optional) if photo is very detailed, uncomment the next line for stronger overlay */
+      /* .contact-hero::before { background: rgba(0,0,0,0.55); } */
 
-            <div class="mb-3">
-              <label for="subject" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-              <div class="invalid-feedback">Please enter a subject.</div>
-            </div>
+      .contact-hero > .container {
+        position: relative; /* keep content above overlay */
+        z-index: 1;
+      }
 
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Hi Melina" required></textarea>
-              <div class="invalid-feedback">Please enter a message.</div>
-            </div>
+      /* Mobile: avoid fixed background issues */
+      @media (max-width: 991.98px) {
+        .contact-hero {
+          background-attachment: scroll;
+          min-height: 100vh;
+        }
+      }
 
-            <!-- Optional: honeypot to reduce spam -->
-            <input type="text" name="_gotcha" style="display:none">
+      /* Nice “scroll down” cue */
+      .scroll-cue {
+        position: absolute;
+        bottom: 1.25rem;
+        left: 0; right: 0;
+        text-align: center;
+        color: #fff;
+        opacity: .85;
+        font-size: .95rem;
+      }
+      .scroll-cue i {
+        display: block;
+        font-size: 1.25rem;
+        animation: bounce 1.4s infinite;
+      }
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(6px); }
+      }
 
-            <!-- Optional: redirect after success -->
-            <input type="hidden" name="_redirect" value="https://melcampos.github.io/contact.html?sent=1">
+      /* Cards & form: slight transparency for the photo to show through */
+      .contact-card, .contact-form-card {
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 0;
+        border-radius: .75rem;
+        box-shadow: 0 10px 24px rgba(0,0,0,.18);
+      }
 
-            <button type="submit" class="btn btn-primary btn-lg">Send</button>
-          </form>
+      /* Make labels readable */
+      .form-label { color: #111; }
+    </style>
+  </head>
 
-          <!-- OPTION B: mailto (fallback — opens user’s email client)
-          <form action="mailto:mel_linaa@hotmail.com" method="post" enctype="text/plain">
-            ...
-          </form>
-          -->
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">Melina Campos, PhD</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
-  </div>
-</section>
-        <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Campos's Website 2023</div></footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script>
-  // Bootstrap validation
-  (function () {
-    'use strict';
-    const forms = document.querySelectorAll('.needs-validation');
-    Array.prototype.slice.call(forms).forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault(); event.stopPropagation();
+    <!-- Contact -->
+    <section class="contact-hero" id="contact">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center text-center text-white mb-5">
+          <div class="col-lg-8">
+            <h2 class="display-6 fw-bold">Get in touch</h2>
+            <p class="lead mb-0"></p>
+          </div>
+        </div>
+
+        <!-- 4) Success message (shows when ?sent=1) -->
+        <div id="form-success" class="alert alert-success d-none mx-auto" role="alert" style="max-width: 720px;">
+          Thanks! Your message was sent.
+        </div>
+
+        <!-- Send a message (form) -->
+        <div class="row gx-4 gx-lg-5 justify-content-center mt-4">
+          <div class="col-lg-8">
+            <div class="card contact-form-card p-4">
+              <h3 class="mb-3">Send a message</h3>
+
+              <!-- Formspree form -->
+              <form
+                action="https://formspree.io/f/xgvnwjvp"
+                method="POST"
+                class="needs-validation"
+                novalidate
+              >
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="_replyto" placeholder="your@email.com" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                  <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Hi Melina" required></textarea>
+                  <div class="invalid-feedback">Please enter a message.</div>
+                </div>
+
+                <!-- Optional: honeypot to reduce spam -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <!-- Optional: redirect after success -->
+                <input type="hidden" name="_redirect" value="https://melcampos.github.io/contact.html?sent=1">
+
+                <button type="submit" class="btn btn-primary btn-lg">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2) Professional info card -->
+        <div class="row gx-4 gx-lg-5 justify-content-center mt-4">
+          <div class="col-lg-8">
+            <div class="card contact-card p-4">
+              <h3 class="mb-3">Professional Information</h3>
+              <div class="row">
+                <div class="col-md-7">
+                  <p class="mb-2"><strong>Melina Campos, PhD</strong></p>
+                  <p class="mb-2">Vector Genetics Lanboratory</p>
+                  <p class="mb-2">Assistant Project Scientist</p>
+                  <p class="mb-2">Davis, California</p>
+                </div>
+                <div class="col-md-5">
+                  <p class="mb-2"><strong>Email:</strong>
+                    <a href="mailto:mdelima@ucdavis.edu">mdelima@ucdavis.edu</a>
+                  </p>
+                  <p class="mb-2"><strong>Phone:</strong> +1 (530) 752-7333</p>
+                  <!-- Add: Office hours, building/room, lab website, etc. -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="scroll-cue">
+          Scroll down
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black small text-center text-white-50">
+      <div class="container px-4 px-lg-5">
+        Copyright &copy; Campos's Website 2023
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
+
+    <!-- SB Forms (unused, safe to keep/remove) -->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <!-- 4) Bootstrap validation + show success alert on ?sent=1 -->
+    <script>
+      (function () {
+        'use strict';
+
+        // Bootstrap validation
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault(); event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+
+        // Show success alert if redirected with ?sent=1
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('sent') === '1') {
+          const alertEl = document.getElementById('form-success');
+          if (alertEl) alertEl.classList.remove('d-none');
+          // Clean the URL so the message doesn’t persist on refresh
+          history.replaceState({}, "", window.location.pathname);
         }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  })();
-</script>
-    </body>
+      })();
+    </script>
+  </body>
 </html>
