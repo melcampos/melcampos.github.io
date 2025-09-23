@@ -39,31 +39,47 @@
           .pub-list { list-style: none; padding-left: 0; margin: 0; }
           .pub-list li + li { margin-top: .75rem; }
             /* Fixed profile bar below navbar */
+/* Fixed profile bar below navbar */
 .profile-bar {
   position: fixed;
-  top: 72px; /* height of your fixed navbar */
+  top: 72px; /* adjust if navbar height changes */
   left: 0;
   right: 0;
-  background: #f8f9fa;
+  background: #fff; /* white background */
   border-bottom: 1px solid #ddd;
-  z-index: 1029; /* slightly less than navbar */
-  padding: 0.5rem 1rem;
+  z-index: 1029;
+  padding: 0.75rem 1rem;
 }
 
+/* Style links */
 .profile-bar a {
-  margin: 0 1rem;
+  margin: 0 1.5rem;
   font-weight: 600;
-  color: #0d6efd;
+  color: #000; /* black text */
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
+/* Larger icons, black */
+.profile-bar i {
+  font-size: 1.5rem;
+  margin-right: 0.4rem;
+  color: #000;
+  vertical-align: middle;
+}
+
+/* Hover effect */
 .profile-bar a:hover {
-  text-decoration: underline;
+  color: #0d6efd;
 }
 
-/* Push main content down so it doesn’t overlap */
+.profile-bar a:hover i {
+  color: #0d6efd;
+}
+
+/* Push main content down */
 .publications-section {
-  margin-top: 60px; /* adjust so content starts below profile bar */
+  margin-top: 100px; /* leaves room for navbar + bar */
 }
         </style>
     </head>
@@ -86,16 +102,22 @@
                 </div>
             </div>
         </nav>
-        <!-- Profile Links Bar -->
+<!-- Profile Links Bar -->
 <div class="profile-bar text-center">
-  <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+  <a href="https://scholar.google.com/citations?user=OKaxMMkAAAAJ&hl=en&oi=ao" target="_blank">
     <i class="fas fa-graduation-cap"></i> Google Scholar
   </a>
-  <a href="https://www.researcherid.com/rid/YOUR_ID" target="_blank">
-    <i class="fas fa-id-card"></i> ResearchID
+  <a href="https://www.webofscience.com/wos/author/record/C-4724-2012" target="_blank">
+    <i class="fas fa-flask"></i> Web of Science
   </a>
-  <a href="https://orcid.org/YOUR_ID" target="_blank">
+  <a href="https://www.researchgate.net/profile/Melina-Campos?ev=hdr_xprf" target="_blank">
+    <i class="fab fa-researchgate"></i> ResearchGate
+  </a>
+  <a href="https://orcid.org/0000-0001-7422-8145" target="_blank">
     <i class="fab fa-orcid"></i> ORCID
+  </a>
+  <a href="http://lattes.cnpq.br/1104835656826108" target="_blank">
+    <i class="fas fa-file-alt"></i> Lattes
   </a>
 </div>
         <!-- Publications -->
